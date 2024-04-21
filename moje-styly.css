@@ -1,0 +1,67 @@
+code::before {
+	content: '$ ';
+	opacity: 0.5;
+}
+
+h1::before,
+h2::before {
+	content: '';
+	width: 0.5em;
+	height: 0.5em;
+	position: relative;
+	bottom: 0.06em;
+	margin-right: 0.3rem;
+	border-radius: 50%;
+	display: inline-block;
+	background-color: #ffaaff;
+}
+
+/* --------------------------- */
+
+blockquote {
+	position: relative;
+}
+blockquote::before,
+blockquote::after {
+	content: '„';
+	font-size: 6em;
+	position: absolute;
+	opacity: 0.2;
+}
+blockquote::before {
+	bottom: 0.05em;
+	left: 0.15em;
+}
+blockquote::after {
+	content: '“';
+	top: 0.05em;
+	right: 0.15em;
+}
+
+/* --------------------------- */
+
+.nahoru {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nahoru::before,
+.nahoru::after {
+	margin-top: -0.7em;
+	content: '';
+	width: 40%;
+	height: 0.4em;
+	background-color: #000000;
+}
+
+.nahoru::before {
+	transform: rotate(-45deg) translateX(0.2em);
+	transform-origin: 100% 50%;
+}
+
+.nahoru::after {
+	transform: rotate(45deg);
+	transform-origin: 0 50%;
+	transform: rotate(45deg) translateX(-0.2em);
+}
